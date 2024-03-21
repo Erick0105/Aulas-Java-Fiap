@@ -32,4 +32,10 @@ public class Calculo {
             mensagem = "Seu IMC é de " + calcularImc() + "e você está em obesidade grau 3";
         return mensagem;
     }
+    public double pesoIdeal(String sexo){
+        if (sexo.equalsIgnoreCase("Masculino"))
+            return 52 + (0.75 * (this.altura - 152.4));
+        else
+            return 52  + (0.67 * (this.altura - 152.4));
+    }
 }
