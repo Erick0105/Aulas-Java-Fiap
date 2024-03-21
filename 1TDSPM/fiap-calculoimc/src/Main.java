@@ -9,6 +9,11 @@ public class Main {
         System.out.println("Digite sua altura");
         double altura = leitor.nextDouble();
 
-        
+        Calculo calculo = new Calculo(peso,altura);
+        System.out.println(calculo.exibirMensagem());
+
+        System.out.println("Seu sexo é Masculino ou Feminino? ");
+        String sexo = leitor.next();
+        System.out.println(calculo.pesoIdeal(sexo));
     }
 }
