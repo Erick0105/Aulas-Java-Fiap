@@ -1,21 +1,32 @@
 //Classe de execução => main
 public class CriarLivros {
     public static void main(String[] args) {
-        //Instanciando um objeto => criar um objeto na memória
-        //tipoObjeto nomeObejto = operadorInstancia   construtor;
-        // Livro     favorito =       new              Livro();
-        Livro favorito = new Livro();
-        favorito.titulo = "O Hobbit";
+        //Instanciando um objeto => criar o objeto na memória
+        // tipoObjeto nomeObjeto = operadorInstanciação  construtor;
+        //   Livro      favorito =       new               Livro();
+        //Instanciar editora
+        Editora editora = new Editora();
+        editora.nome = "Harper Collins";
+        editora.representante = "Joao";
+        Livro favorito = new Livro("O Hobbit");
+        //favorito.titulo = "O Hobbit";
         favorito.autor = "J. R. R. Talkien";
-        favorito.valor =  37.37;
-        favorito.editora = "Harper Collins";
+        favorito.valor = 37.27;
+        favorito.editora = editora;
         favorito.resumo = "Bilbo era um dos ...";
-        favorito.tipoCapa = "Comum";
+        favorito.tipoCapa = TipoCapaEnum.COMUM;
 
-        System.out.println("Meu livro favorito é: " + favorito.titulo + "\n\nSeu autor é: " + favorito.autor + "\n\nPreço é: " + favorito.valor);
+        System.out.println("Meu livro favorito é:" +
+                favorito.titulo + "\nSeu autor é: " + favorito.autor +
+                " preço: R$ " + favorito.valor);
+        System.out.println(favorito.exibirDados());
 
-        Livro meuLivro = new Livro();
-        meuLivro.titulo = "UML 2.0";
-        meuLivro.valor = 50.99;
+        Livro meuLivro = new Livro("UML 2.0",5);
+        //meuLivro.titulo = "UML 2.0";
+        meuLivro.valor = 58.98;
+        meuLivro.editora=editora;
+        //System.out.println("\n\nTitulo: " + meuLivro.titulo);
+        //System.out.println("Autor: " + meuLivro.autor);
+        System.out.println(meuLivro.exibirDados());
     }
 }
