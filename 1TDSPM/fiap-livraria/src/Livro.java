@@ -21,7 +21,7 @@ public class Livro {
                         "\nPáginas: " + this.paginas +
                         "\nAutor: " + this.autor +
                         "\nEditora:" + this.editora.nome +
-                        "\n---------------" ;               ;
+                        "\n---------------" ;
         return dados;
     }
     public Livro(String titulo){
@@ -103,5 +103,11 @@ public class Livro {
 
     public void setTipoCapa(TipoCapaEnum tipoCapa) {
         this.tipoCapa = tipoCapa;
+    }
+
+    public double aplicarDesconto(){
+        if (tipoCapa.equals(TipoCapaEnum.COMUM))
+            return valor * 0.95;
+        return 0;
     }
 }

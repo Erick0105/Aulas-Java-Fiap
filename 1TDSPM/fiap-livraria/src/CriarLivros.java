@@ -28,5 +28,12 @@ public class CriarLivros {
         //System.out.println("\n\nTitulo: " + meuLivro.titulo);
         //System.out.println("Autor: " + meuLivro.autor);
         System.out.println(meuLivro.exibirDados());
+
+        //Objeto que está na herança
+        LivroDigital livroNovoDigital = new LivroDigital();
+        livroNovoDigital.setTitulo("Harry potter");
+        livroNovoDigital.setEditora(editora);
+        livroNovoDigital.setMarcaAgua("Verdadeira");
+        System.out.println(livroNovoDigital.exibirDados());
     }
 }
