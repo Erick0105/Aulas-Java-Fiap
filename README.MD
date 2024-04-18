@@ -1,4 +1,4 @@
-# Projectos de Python do curso ADS
+# Projectos de Java do curso ADS
 
 <div>
 
