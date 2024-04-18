@@ -8,7 +8,7 @@ public class CriarLivros {
         Editora editora = new Editora();
         editora.nome = "Harper Collins";
         editora.representante = "Joao";
-        Livro favorito = new Livro("O Hobbit");
+        LivroFisico favorito = new LivroFisico("O Hobbit");
         //favorito.titulo = "O Hobbit";
         favorito.setAutor("J. R. R. Talkien");
         favorito.setValor(37.27);
@@ -21,7 +21,7 @@ public class CriarLivros {
                 " preço: R$ " + favorito.getValor());
         System.out.println(favorito.exibirDados());
 
-        Livro meuLivro = new Livro("UML 2.0",5);
+        LivroFisico meuLivro = new LivroFisico("UML 2.0",5);
         //meuLivro.titulo = "UML 2.0";
         meuLivro.setValor(58.98);
         meuLivro.setEditora(editora);

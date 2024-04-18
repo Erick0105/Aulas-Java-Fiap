@@ -1,4 +1,4 @@
-public class Livro {
+public abstract class Livro {
 
     //---ATRIBUTOS ---///
     //+ (public) TipoDado nomeAtributoOuVariavel
@@ -13,16 +13,14 @@ public class Livro {
 
     // --- MÉTODOS ---
     public String exibirDados(){
-        String dados =
-                "---------------" +
+        return ("---------------" +
                         "\nTitulo: " + this.titulo +
                         "\nResumo: " + this.resumo +
                         "\nPreço: R$ " + this.valor +
                         "\nPáginas: " + this.paginas +
                         "\nAutor: " + this.autor +
                         "\nEditora:" + this.editora.nome +
-                        "\n---------------" ;
-        return dados;
+                        "\n---------------") ;
     }
     public Livro(String titulo){
         this.titulo = titulo;
