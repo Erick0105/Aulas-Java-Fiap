@@ -1,3 +1,7 @@
+package models;
+
+import models.Funcionario;
+
 public class Gerente extends Funcionario {
 
     //--ATRIBUTOS

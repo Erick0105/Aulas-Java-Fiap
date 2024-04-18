@@ -1,4 +1,8 @@
-public class Vendedor extends Funcionario{
+package models;
+
+import models.Funcionario;
+
+public class Vendedor extends Funcionario {
 
 
     //ATRIBUTOS

@@ -1,3 +1,9 @@
+package tests;
+
+import models.Funcionario;
+import models.Gerente;
+import models.Vendedor;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -5,7 +11,7 @@ public class Main {
         func.setNome("Eliane");
         func.setSalario(1000);
         double bonificacao = func.calculaBonificacao();
-        System.out.println("Funcionario" + func.getNome() +
+        System.out.println("models.Funcionario" + func.getNome() +
                 "\nSalário Bruto: " + func.getSalario() +
                 "\nBonificação: " + bonificacao +
                 "\nSalário Liquido: + " + (func.getSalario() + bonificacao));
@@ -15,7 +21,7 @@ public class Main {
         gerente.setSalario(1000);
         gerente.setGratificacao(1000);
         double gerentBonificacao = gerente.calculaBonificacao();
-        System.out.println("Gerente" + gerente.getNome() +
+        System.out.println("models.Gerente" + gerente.getNome() +
                 "\nSalário Bruto: " + gerente.getSalario() +
                 "\nGratificação do cargo: " + gerente.getGratificacao() +
                 "\nBonificação: " + gerentBonificacao +
@@ -26,7 +32,7 @@ public class Main {
         vendedor.setSalario(1000);
         double salarioComComissao = vendedor.calculaComissao(20000);
         double vendBonificacao = vendedor.calculaBonificacao();
-        System.out.println("Vendedor(a)" + vendedor.getNome() +
+        System.out.println("models.Vendedor(a)" + vendedor.getNome() +
                 "\nSalário Bruto: " + vendedor.getSalario() +
                 "\nComissão: " + vendedor.getComissao() +
                 "\nBonificação: " + vendBonificacao +
