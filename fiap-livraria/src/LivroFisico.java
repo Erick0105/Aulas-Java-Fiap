@@ -16,4 +16,10 @@ public class LivroFisico extends Livro{
     public String exibirDados() {
         return super.exibirDados() + "\nTaxa de impressão: " + this.getTaxaImpressao() + "\n---------------";
     }
+
+    @Override
+    public double aplicarDesconto() {
+        return super.getValor() * 0.95;
+    }
+
 }

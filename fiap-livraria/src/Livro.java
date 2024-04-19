@@ -103,9 +103,5 @@ public abstract class Livro {
         this.tipoCapa = tipoCapa;
     }
 
-    public double aplicarDesconto(){
-        if (tipoCapa.equals(TipoCapaEnum.COMUM))
-            return valor * 0.95;
-        return 0;
-    }
+    public abstract double aplicarDesconto();
 }
