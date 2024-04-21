@@ -1,4 +1,6 @@
-public class Transporte extends Despesa{
+package models;
+
+public class Transporte extends Despesa {
 
     //ATRIBUTOS
     private double kmPercorrida;
@@ -34,7 +36,7 @@ public class Transporte extends Despesa{
                 "\nDescrição: " + super.getDescricao() +
                 "\nQuantidade de Km rodado: " + this.getKmPercorrida() + "Km" +
                 "\nValor dos pedagios: R$" + this.getValorPedagios() +
-                "\nDespesa total: R$" + super.getValorTotal() +
+                "\nmodels.Despesa total: R$" + super.getValorTotal() +
                 "\n--------------------------------------------------");
 
     }

@@ -1,20 +1,29 @@
+package tests;
+
+import models.Alimentacao;
+import models.Diaria;
+import models.Transporte;
+import models.GerenciadorDespesas;
+
 import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner scanner= new Scanner(System.in);
+
 
         //OBJETOS INSTANCIADOS
         Alimentacao refeicoes = new Alimentacao();
         Transporte veiculos = new Transporte();
         Diaria diarias = new Diaria();
         GerenciadorDespesas gerenciador = new GerenciadorDespesas();
+        Scanner scanner= new Scanner(System.in);
+
 
         //FUNCIONALIDADE
         System.out.println("---------------MENU---------------" +
                 "\n[1] - Alimentação" +
-                "\n[2] - Transporte" +
-                "\n[3] - Diaria" +
+                "\n[2] - models.Transporte" +
+                "\n[3] - models.Diaria" +
                 "\n[4] - Apresenta analise de despesas" +
                 "\n[0] - Sair" +
                 "\n----------------------------------");

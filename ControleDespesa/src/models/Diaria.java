@@ -1,4 +1,6 @@
-public class Diaria extends Despesa{
+package models;
+
+public class Diaria extends Despesa {
 
     //ATRIBUTOS
     private double qtdeDiaria;
@@ -27,7 +29,7 @@ public class Diaria extends Despesa{
         System.out.println("--------------------------------------------------" +
                 "\nDescrição: " + super.getDescricao() +
                 "\nQuantidade de diárias: " + this.getQtdeDiaria() +
-                "\nDespesa total: R$" + super.getValorTotal() +
+                "\nmodels.Despesa total: R$" + super.getValorTotal() +
                 "\n--------------------------------------------------");
 
     }
