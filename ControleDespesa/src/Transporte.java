@@ -21,19 +21,21 @@ public class Transporte extends Despesa{
     //METÓDOS
     @Override
     public void calcularDespesa() {
-        System.out.println("Qual foi a quilometragem percorrida?\n=>");
+        System.out.println("Qual foi a quilometragem percorrida?\n=> ");
         this.kmPercorrida = leitor.nextDouble();
-        System.out.println("E Qual seria o valor gasto com pedagios?\n=>");
+        System.out.println("E Qual seria o valor gasto com pedagios?\n=> ");
         this.valorPedagios = leitor.nextDouble();
         super.setValorTotal((this.kmPercorrida * 3) + this.valorPedagios);
     }
 
     @Override
     public void listaDespesa() {
-        System.out.println("Descrição: " + super.getDescricao() +
+        System.out.println("--------------------------------------------------" +
+                "\nDescrição: " + super.getDescricao() +
                 "\nQuantidade de Km rodado: " + this.getKmPercorrida() + "Km" +
                 "\nValor dos pedagios: R$" + this.getValorPedagios() +
-                "\nA despesa total é de: R$" + super.getValorTotal());
+                "\nDespesa total: R$" + super.getValorTotal() +
+                "\n--------------------------------------------------");
 
     }
 }

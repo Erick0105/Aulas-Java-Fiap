@@ -29,19 +29,19 @@ public class Alimentacao extends Despesa {
     @Override
     public void cadastrarDespesa() {
         super.cadastrarDespesa();
-        System.out.println("Qual é o nome do Restaurante?\n=>");
+        System.out.println("Qual é o nome do Restaurante?\n=> ");
         this.nomeRestaurante = leitor.nextLine();
-        System.out.println("Qual é a quantidade de refeições?\n=>");
+        System.out.println("Qual é a quantidade de refeições?\n=> ");
         this.qtdeRefeicoes = leitor.nextInt();
     }
 
     @Override
     public void listaDespesa() {
-        System.out.println("--------------------------------------------------\n" +
-                        "O nome da empresa é: " + this.getNomeRestaurante() +
+        System.out.println("--------------------------------------------------" +
+                        "\nO nome da empresa: " + this.getNomeRestaurante() +
                         "\nDescrição: " + super.getDescricao()  +
                         "\nA Quantidade de refeições é igual a: " + this.getQtdeRefeicoes() +
-                        "\nA despesa total é de: R$" + super.getValorTotal() +
+                        "\nDespesa total: R$" + super.getValorTotal() +
                         "\n--------------------------------------------------");
 
     }
