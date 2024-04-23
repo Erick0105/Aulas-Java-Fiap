@@ -27,7 +27,7 @@ public abstract class Despesa {
 
     //METÓDOS
     public void cadastrarDespesa() {
-        System.out.println("------------------------------------------------\nQual é a descrição da models.Despesa?\n=>");
+        System.out.println("------------------------------------------------\nQual é a descrição da Despesa?\n=>");
         this.descricao = leitor.nextLine();
         this.valorTotal = 0;
 

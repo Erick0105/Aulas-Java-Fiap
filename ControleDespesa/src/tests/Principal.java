@@ -30,21 +30,42 @@ public class Principal {
                 "\n[4] - Incluir despesa para analise" +
                 "\n[0] - Sair" +
                 "\n----------------------------------";
+        String mensagemSaida = "Até mais\nPrograma Finalizado";
 
         System.out.println(menuInicial);
         System.out.println("Digite a opção desejada:\n=> ");
-        int opcao = scanner.nextInt();
+        int opcao1 = scanner.nextInt();
 
-        if (opcao == 0){
-            System.out.println("Até mais");
+        if (opcao1 == 0){
+            System.out.println(mensagemSaida);
+
         }else {
-            if (opcao == 1){
+            if (opcao1 == 1){
                 Alimentacao refeicoes = new Alimentacao();
-            } else if (opcao == 2) {
+
+                System.out.println(menuSecundario);
+                System.out.println("O que o senhor(a) deseja fazer na parte de Alimentação?");
+                int opcao2 = scanner.nextInt();
+
+                if (opcao2 == 0) {
+                    System.out.println(mensagemSaida);
+                } else {
+                    if (opcao2 == 1){
+                        refeicoes.cadastrarDespesa();
+                    } else if (opcao2 == 2) {
+                        refeicoes.calcularDespesa();
+                    } else if (opcao2 == 3) {
+                        refeicoes.listaDespesa();
+                    } else if (opcao2 == 4){
+                        System.out.println("Parte do gerenciador, ela vai ensinar ainda");
+                    }
+                }
+
+            } else if (opcao1 == 2) {
                 Transporte veiculos = new Transporte();
-            } else if (opcao == 3) {
+            } else if (opcao1 == 3) {
                 Diaria diarias = new Diaria();
-            } else if (opcao == 4) {
+            } else if (opcao1 == 4) {
                 GerenciadorDespesas gerenciador = new GerenciadorDespesas();
             }
         }

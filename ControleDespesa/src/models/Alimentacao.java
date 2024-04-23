@@ -43,7 +43,7 @@ public class Alimentacao extends Despesa {
                         "\nO nome da empresa: " + this.getNomeRestaurante() +
                         "\nDescrição: " + super.getDescricao()  +
                         "\nA Quantidade de refeições é igual a: " + this.getQtdeRefeicoes() +
-                        "\nmodels.Despesa total: R$" + super.getValorTotal() +
+                        "\nDespesa total: R$" + super.getValorTotal() +
                         "\n--------------------------------------------------");
 
     }
