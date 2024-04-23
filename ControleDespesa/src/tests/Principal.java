@@ -83,6 +83,24 @@ public class Principal {
                 }
             } else if (opcao1 == 3) {
                 Diaria diarias = new Diaria();
+
+                System.out.println(menuSecundario);
+                System.out.println("O que o senhor(a) deseja fazer na parte de Diaria?\n=> ");
+                int opcao2 = scanner.nextInt();
+
+                if (opcao2 == 0) {
+                    System.out.println(mensagemSaida);
+                } else {
+                    if (opcao2 == 1){
+                        diarias.cadastrarDespesa();
+                    } else if (opcao2 == 2) {
+                        diarias.calcularDespesa();
+                    } else if (opcao2 == 3) {
+                        diarias.listaDespesa();
+                    } else if (opcao2 == 4){
+                        System.out.println("Parte do gerenciador, ela vai ensinar ainda");
+                    }
+                }
             } else if (opcao1 == 4) {
                 GerenciadorDespesas gerenciador = new GerenciadorDespesas();
             }
