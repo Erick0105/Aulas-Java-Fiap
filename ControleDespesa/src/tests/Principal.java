@@ -44,7 +44,7 @@ public class Principal {
                 Alimentacao refeicoes = new Alimentacao();
 
                 System.out.println(menuSecundario);
-                System.out.println("O que o senhor(a) deseja fazer na parte de Alimentação?");
+                System.out.println("O que o senhor(a) deseja fazer na parte de Alimentação?\n=> ");
                 int opcao2 = scanner.nextInt();
 
                 if (opcao2 == 0) {
@@ -63,6 +63,24 @@ public class Principal {
 
             } else if (opcao1 == 2) {
                 Transporte veiculos = new Transporte();
+
+                System.out.println(menuSecundario);
+                System.out.println("O que o senhor(a) deseja fazer na parte de Transporte?\n=> ");
+                int opcao2 = scanner.nextInt();
+
+                if (opcao2 == 0) {
+                    System.out.println(mensagemSaida);
+                } else {
+                    if (opcao2 == 1){
+                        veiculos.cadastrarDespesa();
+                    } else if (opcao2 == 2) {
+                        veiculos.calcularDespesa();
+                    } else if (opcao2 == 3) {
+                        veiculos.listaDespesa();
+                    } else if (opcao2 == 4){
+                        System.out.println("Parte do gerenciador, ela vai ensinar ainda");
+                    }
+                }
             } else if (opcao1 == 3) {
                 Diaria diarias = new Diaria();
             } else if (opcao1 == 4) {
