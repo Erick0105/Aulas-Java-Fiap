@@ -1,3 +1,5 @@
+package models;
+
 public class Veiculo {
 
     //Atributos
@@ -31,9 +33,12 @@ public class Veiculo {
     }
 
     public String doViewCupom(){
-        return "Valor da Hora: " + this.valorHora +
-                "\nValor adicional:" + this.valorAdicional +
-                "\nQuantidade de horas:" + this.horas +
-                "\nTotal a ser pago:" + this.doTotal();
+        return "---------------------------------------------------" +
+                "\nCupom do Estacionamento" +
+                "\n\nValor da Hora: " + this.valorHora + " horas" +
+                "\nValor adicional: R$" + this.valorAdicional +
+                "\nQuantidade de horas:" + this.horas + " horas" +
+                "\nTotal a ser pago: R$" + this.doTotal() +
+                "---------------------------------------------------";
     }
 }
