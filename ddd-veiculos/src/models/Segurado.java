@@ -23,12 +23,14 @@ public class Segurado extends Veiculo implements ISeguroService{
 
     @Override
     public double doDesconto(){
-        return super.doTotal() * seguro /100;
+        double desc = super.doTotal() * seguro /100;
+        return desc;
     }
 
     @Override
     public double doTotal() {
-        return super.doTotal() - doDesconto();
+        double var = super.doTotal() - doDesconto();
+        return var;
     }
 
     @Override

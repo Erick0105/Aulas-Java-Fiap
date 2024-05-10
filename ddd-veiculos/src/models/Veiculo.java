@@ -34,7 +34,8 @@ public class Veiculo {
 
     //Metodos
     public double doTotal(){
-        return this.valorHora + this.valorAdicional * (horas - 1);
+        double var = this.valorHora + this.valorAdicional * (this.horas - 1);
+        return var;
     }
 
     public String doViewCupom(){
