@@ -2,8 +2,10 @@ package models;
 
 public class Segurado extends Veiculo implements ISeguroService{
 
+
     //Atributos
     private double seguro;
+
 
     //Getters e Setters
     public double getSeguro() {
@@ -13,11 +15,13 @@ public class Segurado extends Veiculo implements ISeguroService{
         this.seguro = seguro;
     }
 
+
     //Metodos
-    public void Segurado (double seguro){
+    public Segurado (double seguro){
         this.seguro = seguro;
     }
 
+    @Override
     public double doDesconto(){
         return super.doTotal() * seguro /100;
     }

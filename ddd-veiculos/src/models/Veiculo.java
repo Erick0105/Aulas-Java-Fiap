@@ -2,10 +2,12 @@ package models;
 
 public class Veiculo {
 
+
     //Atributos
     private double valorHora;
     private double valorAdicional;
     private double horas;
+
 
     //Getters e Setters
     public double getValorHora() {
@@ -28,6 +30,7 @@ public class Veiculo {
     public void setHoras(double horas) {
         this.horas = horas;
     }
+
 
     //Metodos
     public double doTotal(){
