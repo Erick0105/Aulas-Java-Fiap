@@ -14,7 +14,8 @@ public class BalancoDiario {
     }
 
     public String doGerarRelatorio(){
-        return "A quantidade de carros foi de :" + qtdeCarros +
-                "E o total é de: R$" + total;
+        return "A quantidade de carros foi de: " + qtdeCarros +
+                "\nE o total é de: R$" + total +
+                "\n---------------------------------------------------";
     }
 }

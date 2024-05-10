@@ -40,10 +40,10 @@ public class Veiculo {
     public String doViewCupom(){
         return "---------------------------------------------------" +
                 "\nCupom do Estacionamento" +
-                "\n\nValor da Hora: " + this.valorHora + " horas" +
+                "\n\nValor da Hora é igual a: " + this.valorHora + " horas" +
                 "\nValor adicional: R$" + this.valorAdicional +
-                "\nQuantidade de horas:" + this.horas + " horas" +
+                "\nQuantidade de horas: " + this.horas + " horas" +
                 "\nTotal a ser pago: R$" + this.doTotal() +
-                "---------------------------------------------------";
+                "\n---------------------------------------------------";
     }
 }

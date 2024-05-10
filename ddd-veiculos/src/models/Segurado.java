@@ -34,6 +34,7 @@ public class Segurado extends Veiculo implements ISeguroService{
     @Override
     public String doViewCupom() {
         return super.doViewCupom() + "\nValor de Desconto: R$" + this.doDesconto() +
-                "\nNovo valor total a ser pago: R$" + this.doTotal();
+                "\nNovo valor total a ser pago: R$" + this.doTotal() +
+                "\n---------------------------------------------------";
     }
 }
