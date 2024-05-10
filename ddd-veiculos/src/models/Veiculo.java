@@ -14,12 +14,14 @@ public class Veiculo {
     public void setValorHora(double valorHora) {
         this.valorHora = valorHora;
     }
+
     public double getValorAdicional() {
         return valorAdicional;
     }
     public void setValorAdicional(double valorAdicional) {
         this.valorAdicional = valorAdicional;
     }
+
     public double getHoras() {
         return horas;
     }
