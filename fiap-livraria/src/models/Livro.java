@@ -1,27 +1,34 @@
-public abstract class Livro {
+package models;
+
+import models.Editora;
+
+public abstract class Livro implements Exemplar{
 
     //---ATRIBUTOS ---///
     //+ (public) TipoDado nomeAtributoOuVariavel
-    private String titulo;
+    protected String titulo;
     private String autor;
-    private double valor;
+    protected double valor;
     private Editora editora;
     private int paginas;
     private String resumo;
-    private TipoCapaEnum tipoCapa;
-
 
     // --- MÉTODOS ---
     public String exibirDados(){
-        return ("---------------" +
-                        "\nTitulo: " + this.titulo +
-                        "\nResumo: " + this.resumo +
-                        "\nPreço: R$ " + this.valor +
-                        "\nPáginas: " + this.paginas +
-                        "\nAutor: " + this.autor +
-                        "\nEditora:" + this.editora.nome +
-                        "\n---------------") ;
+        String dados =
+                "---------------" +
+                "\nTitulo: " + this.titulo +
+                "\nResumo: " + this.resumo +
+                "\nPreço: R$ " + this.valor +
+                "\nPáginas: " + this.paginas +
+                "\nAutor: " + this.autor +
+                "\nmodels.Editora:" + this.editora.nome +
+                "\n---------------" ;               ;
+        return dados;
     }
+
+    public abstract double aplicarDesconto();
+
     public Livro(String titulo){
         this.titulo = titulo;
     }
@@ -33,15 +40,14 @@ public abstract class Livro {
     }
     public Livro(String titulo, String autor,
                  double valor, Editora editora,
-                 int paginas, String resumo,
-                 TipoCapaEnum tipoCapa) {
+                 int paginas, String resumo) {
         this.titulo = titulo;
         this.autor = autor;
         this.valor = valor;
         this.editora = editora;
         this.paginas = paginas;
         this.resumo = resumo;
-        this.tipoCapa = tipoCapa;
+
     }
 
     public String getTitulo() {
@@ -81,8 +87,8 @@ public abstract class Livro {
     }
 
     public void setPaginas(int paginas) {
-        if (paginas <= 0)
-            System.out.println("Quantidade de Páginas Invalidas");
+        if(paginas<=0)
+            System.out.printf("Páginas inválidas");
         else
             this.paginas = paginas;
     }
@@ -95,13 +101,5 @@ public abstract class Livro {
         this.resumo = resumo;
     }
 
-    public TipoCapaEnum getTipoCapa() {
-        return tipoCapa;
-    }
 
-    public void setTipoCapa(TipoCapaEnum tipoCapa) {
-        this.tipoCapa = tipoCapa;
-    }
-
-    public abstract double aplicarDesconto();
 }
