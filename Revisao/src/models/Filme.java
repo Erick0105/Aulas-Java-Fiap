@@ -1,8 +1,9 @@
 package models;
 
-public class Filme extends Titulo{
+public class Filme extends Titulo implements IClassificavel{
 
     private String diretor;
+
 
     public String getDiretor() {
         return diretor;
@@ -20,5 +21,10 @@ public class Filme extends Titulo{
     @Override
     public void somarAvaliacoes(double nota) {
         somaAvaliacao += nota;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return 0;
     }
 }
