@@ -48,4 +48,9 @@ public class Serie extends Titulo{
             System.out.println("A série já foi finalizada aproveite para maratonar");
         }
     }
+
+    @Override
+    public void somarAvaliacoes(double nota) {
+        somaAvaliacao += nota;
+    }
 }

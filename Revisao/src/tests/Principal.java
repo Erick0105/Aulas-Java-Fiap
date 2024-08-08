@@ -1,4 +1,5 @@
 package tests;
+import models.Filme;
 import models.Serie;
 import models.Titulo;
 
@@ -6,13 +7,6 @@ import models.Titulo;
 
 public class Principal {
     public static void main(String[] args) {
-        Titulo novoTitulo = new Titulo();
-        novoTitulo.setNome("Lucifer");
-        novoTitulo.setAnoLancamento(2013);
-        novoTitulo.setDuracaoMinutos(1500);
-
-        novoTitulo.exibirFichaTecnica();
-
         Serie novaSerie = new Serie();
         novaSerie.setNome("Naruto");
         novaSerie.setAnoLancamento(2004);
@@ -21,5 +15,10 @@ public class Principal {
         novaSerie.setTemporadas(18);
         novaSerie.setEpPorTemp(20);
         novaSerie.setMinPorEp(24);
+        novaSerie.exibirFichaTecnica();
+
+        Filme novoFilme = new Filme();
+        novoFilme.setNome("Sem memória");
+
     }
 }

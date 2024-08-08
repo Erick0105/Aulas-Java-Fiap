@@ -1,10 +1,11 @@
 package models;
 
-public class Titulo {
+public abstract class Titulo {
     //Atributos -> Caraterísticas
     private String nome;
     private int anoLancamento;
     private int duracaoMinutos;
+    protected double somaAvaliacao;
 
     //Getters e Setters
     public String getNome() {
@@ -34,4 +35,6 @@ public class Titulo {
         System.out.println("Nome: " + nome);
         System.out.println("Ano de Lançamento: " + anoLancamento);
     }
+    //Método abstrato
+    public abstract void somarAvaliacoes(double nota);
 }
