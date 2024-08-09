@@ -6,6 +6,10 @@ public abstract class Titulo {
     private int anoLancamento;
     private int duracaoMinutos;
     protected double somaAvaliacao;
+    protected int totalAvaliacoes;
+    private ClassificacaoEnum classificacaoIndicativa;
+
+
 
     //Getters e Setters
     public String getNome() {
@@ -29,6 +33,29 @@ public abstract class Titulo {
         this.duracaoMinutos = duracaoMinutos;
     }
 
+    public int getTotalAvaliacoes() {
+        return totalAvaliacoes;
+    }
+
+    public void setTotalAvaliacoes(int totalAvaliacoes) {
+        this.totalAvaliacoes = totalAvaliacoes;
+    }
+
+    public double getSomaAvaliacao() {
+        return somaAvaliacao;
+    }
+
+    public void setSomaAvaliacao(double somaAvaliacao) {
+        this.somaAvaliacao = somaAvaliacao;
+    }
+
+    public ClassificacaoEnum getClassificacaoIndicativa() {
+        return classificacaoIndicativa;
+    }
+
+    public void setClassificacaoIndicativa(ClassificacaoEnum classificacaoIndicativa) {
+        this.classificacaoIndicativa = classificacaoIndicativa;
+    }
 
     //Métodos
     public void exibirFichaTecnica(){
