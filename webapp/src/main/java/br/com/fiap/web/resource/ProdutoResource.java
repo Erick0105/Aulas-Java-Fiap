@@ -33,4 +33,16 @@ public class ProdutoResource {
         builder.path(Integer.toString(produto.getCodigo()));
         return Response.created(builder.build()).build();
     }
+
+    @PUT
+    @Path("/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response atualizar(Produto produto, @PathParam("id") int id){
+        if (id == produto.getCodigo()){
+            service.atualizar(produto);
+            return Response.ok().build();
+        }else{
+            return Response.notModified().build();
+        }
+    }
 }

@@ -81,4 +81,21 @@ public class ProdutoDao {
         }
         return produtos;
     }
+
+    public void atualizar(Produto produto){
+        PreparedStatement comandoSql = null;
+        try{
+            comandoSql = conexao.prepareStatement("UPDATE tbl_produto SET nome = ?, preco = ?, quantidade = ? WHERE id = ?");
+            comandoSql.setString(1, produto.getNome());
+            comandoSql.setDouble(1, produto.getPreco());
+            comandoSql.setInt(1, produto.getQuantidade());
+            comandoSql.setInt(1, produto.getCodigo());
+
+            comandoSql.executeUpdate();
+            //conexao.close();
+            comandoSql.close();
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
 }

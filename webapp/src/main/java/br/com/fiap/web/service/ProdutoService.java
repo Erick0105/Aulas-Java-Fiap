@@ -20,7 +20,11 @@ public class ProdutoService {
     }
 
 
-    public Produto cadastrar(Produto produto){
-        return produtoDao.inserir(produto);
+    public void cadastrar(Produto produto){
+        produtoDao.inserir(produto);
+    }
+
+    public void atualizar(Produto produto){
+        produtoDao.atualizar(produto);
     }
 }
