@@ -21,5 +21,5 @@ public class Cliente {
     private String email;
     private String senha;
     private String cpf;
-    private EnumCategoria categoria;
+    private Categoria categoria;
 }
